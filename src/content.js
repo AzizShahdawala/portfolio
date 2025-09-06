@@ -91,6 +91,14 @@ export const miniProjects = [
     repo: "https://github.com/azizshahdawala/TodoList/",
     live: "https://azizshahdawala.github.io/TodoList/",
   },
+      {
+    title: "Drum Kit",
+    year: "2019",
+    desc: "Fun Drum rolls sound created with JavaScript and DOM manipulation.",
+    stack: ["JavaScript", "DOM"],
+    repo: "https://github.com/azizshahdawala/DrumKit/",
+    live: "https://azizshahdawala.github.io/DrumKit/",
+  },
 ];
 
 
