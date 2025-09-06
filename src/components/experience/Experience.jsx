@@ -1,5 +1,6 @@
 import React from "react";
 import { experience } from "../../content";
+import "./Experience.scss"
 
 const Experience = () => (
   <section className="section container" id="experience">

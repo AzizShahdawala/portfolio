@@ -1,14 +1,14 @@
 @import "vars";
-@import "mixins";
+@import "mixin";
 
 // component styles
-@import "components/nav";
-@import "components/hero";
-@import "components/skills";
-@import "components/projects";
-@import "components/experience";
-@import "components/contact";
-@import "components/footer";
+@import "../components/nav/Nav.scss";
+@import "../components/hero/Hero.scss";
+@import "../components/skills/Skills.scss";
+@import "../components/projects/Projects.scss";
+@import "../components/experience/Experience.scss";
+@import "../components/contact/Contact.scss";
+@import "../components/footer/Footer.scss";
 
 :root {
   --bg: #{$bg};

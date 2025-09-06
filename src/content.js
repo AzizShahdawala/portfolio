@@ -12,14 +12,14 @@ export const me = {
 };
 
 export const skills = [
-  "React, ",
-  "Spring Boot, ",
-  "SAP Hybris, ",
-  "Angular, ",
-  "Flutter, ",
-  "TypeScript, ",
-  "REST / GraphQL, ",
-  "PostgreSQL, ",
+  "React",
+  "Spring Boot",
+  "SAP Hybris",
+  "Angular",
+  "Flutter",
+  "TypeScript",
+  "REST / GraphQL",
+  "PostgreSQL",
   "Wordpress"
 ];
 

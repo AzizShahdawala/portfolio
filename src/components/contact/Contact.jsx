@@ -1,5 +1,6 @@
 import React from "react";
 import { me } from "../../content";
+import "./Contact.scss";
 
 const Contact = () => (
   <section className="section container" id="contact">

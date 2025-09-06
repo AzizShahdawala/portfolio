@@ -1,5 +1,6 @@
 import React from "react";
 import { me } from "../../content";
+import "./Nav.scss";
 
 const Nav = ({ onToggleTheme, themeDark }) => (
   <header className="nav">
