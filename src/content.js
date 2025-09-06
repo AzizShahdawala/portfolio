@@ -52,18 +52,51 @@ export const projects = [
 
 export const experience = [
   {
-    company: "Your Company",
-    role: "Senior Software Engineer",
-    period: "2022 - Present",
+    company: "Asian Paints",
+    role: "Senior Executive - Systems Development",
+    period: "Oct 2024 – Present · 1 yr",
+    location: "Mumbai, Maharashtra, India · On-site",
     bullets: [
-      "Led migration to headless commerce using SAP Hybris OCC APIs.",
-      "Designed Spring Boot services for checkout and promotions.",
+      "Leveraging expertise in SAP Hybris, Flutter, and AngularJS to drive innovative digital solutions."
     ],
   },
   {
-    company: "Prev Company",
-    role: "Software Engineer",
-    period: "2020 - 2022",
-    bullets: ["Built Angular portals and implemented CI/CD."],
+    company: "Asian Paints",
+    role: "Executive II - Systems Development",
+    period: "Jun 2022 – Oct 2024 · 2 yrs 5 mos",
+    location: "India · Hybrid",
+    bullets: [
+      "Worked with AngularJS, Jenkins, Jira, Hybris, Spring MVC, Flutter, SAP Commerce Cloud, Spring Boot, Java.",
+      "Focused on User Experience Design (UED) and UI/UX improvements."
+    ],
   },
+  {
+    company: "Asian Paints",
+    role: "Project Trainee",
+    period: "Jan 2022 – Jun 2022 · 6 mos",
+    location: "India",
+    bullets: [
+      "Worked on SAP Commerce Cloud implementation and enhancements."
+    ],
+  },
+  {
+    company: "Tata Consultancy Services",
+    role: "Data Analyst",
+    period: "Aug 2020 – Dec 2021 · 1 yr 5 mos",
+    location: "India · Remote",
+    bullets: [
+      "Worked in TCS Digital focusing on Data Science and Analytics.",
+      "Skills: Python, Data Modeling, SAP HANA, Data Visualization, Dataiku DSS, H2O.Ai, Qlik Sense."
+    ],
+  },
+  {
+    company: "D-WebBox",
+    role: "Junior Web Developer",
+    period: "Jul 2020 – Aug 2020 · 2 mos",
+    location: "Mumbai, Maharashtra, India · Remote",
+    bullets: [
+      "Worked on DevOps and Web Development projects."
+    ],
+  }
 ];
+
