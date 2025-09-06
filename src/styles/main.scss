@@ -74,17 +74,20 @@ body {
   padding: 0.5rem 0.75rem;
   border-radius: 12px;
   text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
 }
 .btn--outline {
   background: transparent;
   border: 1px solid var(--border);
-  padding: 0.45rem 0.6rem;
-  border-radius: 10px;
+  color: var(--fg); // 🔹 fixes visibility in light mode
 }
 .btn--sm {
   padding: 0.35rem 0.6rem;
   font-size: 0.85rem;
 }
+
 
 @media (max-width: 1000px) {
   .projects__grid {

@@ -50,6 +50,42 @@ export const projects = [
   },
 ];
 
+export const miniProjects = [
+  {
+    title: "Monsters Rolodex",
+    year: "2023",
+    desc: "React app displaying monsters with search functionality using external API.",
+    stack: ["React", "API"],
+    repo: "https://github.com/azizshahdawala/monsters-rolodex",
+    live: "https://azizshahdawala.github.io/monsters-rolodex/",
+  },
+  {
+    title: "Background Generator",
+    year: "2022",
+    desc: "Interactive background gradient generator built with JavaScript.",
+    stack: ["JavaScript", "CSS"],
+    repo: "https://github.com/azizshahdawala/background-generator",
+    live: "https://azizshahdawala.github.io/background-generator/",
+  },
+  {
+    title: "Dice Game",
+    year: "2022",
+    desc: "Fun dice rolling game with random number generation logic.",
+    stack: ["JavaScript", "HTML", "CSS"],
+    repo: "https://github.com/azizshahdawala/dice-game",
+    live: "https://azizshahdawala.github.io/dice-game/",
+  },
+  {
+    title: "Memory Test",
+    year: "2021",
+    desc: "Simple memory card matching game built with JavaScript and DOM manipulation.",
+    stack: ["JavaScript", "DOM"],
+    repo: "https://github.com/azizshahdawala/memory-test",
+    live: "https://azizshahdawala.github.io/memory-test/",
+  },
+];
+
+
 export const experience = [
   {
     company: "Asian Paints",

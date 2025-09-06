@@ -7,6 +7,7 @@ import Projects from "./components/projects/Projects";
 import Experience from "./components/experience/Experience";
 import Contact from "./components/contact/Contact";
 import Footer from "./components/footer/Footer";
+import MiniProjects from "./components/mini-projects/MiniProjects";
 
 const App = () => {
   const [dark, setDark] = useState(false);
@@ -36,6 +37,7 @@ const App = () => {
         </section>
         <Skills />
         <Projects />
+        <MiniProjects />
         <Experience />
         <Contact />
       </main>
