@@ -1,5 +1,6 @@
 import React from "react";
 import { projects } from "../../content";
+import { FiGithub, FiEye } from "react-icons/fi";
 import "./Projects.scss";
 
 const Projects = () => (
@@ -10,9 +11,9 @@ const Projects = () => (
         <article key={p.title} className="card">
           <div className="card__head">
             <h3>{p.title}</h3>
-            <span className="muted">{p.year}</span>
+            <span className="year">{p.year}</span>
           </div>
-          <p className="muted">{p.desc}</p>
+          <p className="desc">{p.desc}</p>
           <div className="tags">
             {p.stack.map((t) => (
               <span key={t} className="pill">
@@ -23,12 +24,12 @@ const Projects = () => (
           <div className="actions">
             {p.repo && (
               <a
-                className="btn btn--sm"
+                className="btn btn--sm btn--dark"
                 href={p.repo}
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                Repo
+                <FiGithub size={16} /> Repo
               </a>
             )}
             {p.live && (
@@ -38,7 +39,7 @@ const Projects = () => (
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                Live
+                <FiEye size={16} /> Live
               </a>
             )}
           </div>

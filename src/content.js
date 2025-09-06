@@ -83,6 +83,14 @@ export const miniProjects = [
     repo: "https://github.com/azizshahdawala/memory-test",
     live: "https://azizshahdawala.github.io/memory-test/",
   },
+    {
+    title: "Todo List",
+    year: "2021",
+    desc: "A todo app built with JavaScript and DOM manipulation.",
+    stack: ["JavaScript", "DOM"],
+    repo: "https://github.com/azizshahdawala/TodoList/",
+    live: "https://azizshahdawala.github.io/TodoList/",
+  },
 ];
 
 
@@ -100,7 +108,7 @@ export const experience = [
     company: "Asian Paints",
     role: "Executive II - Systems Development",
     period: "Jun 2022 – Oct 2024 · 2 yrs 5 mos",
-    location: "India · Hybrid",
+    location: "Mumbai, Maharashtra, India · On-site",
     bullets: [
       "Worked with AngularJS, Jenkins, Jira, Hybris, Spring MVC, Flutter, SAP Commerce Cloud, Spring Boot, Java.",
       "Focused on User Experience Design (UED) and UI/UX improvements."
@@ -110,7 +118,7 @@ export const experience = [
     company: "Asian Paints",
     role: "Project Trainee",
     period: "Jan 2022 – Jun 2022 · 6 mos",
-    location: "India",
+    location: "Mumbai, Maharashtra, India · On-site",
     bullets: [
       "Worked on SAP Commerce Cloud implementation and enhancements."
     ],

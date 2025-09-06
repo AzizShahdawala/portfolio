@@ -1,26 +1,33 @@
 import React from "react";
 import { experience } from "../../content";
-import "./Experience.scss"
+import { FiMapPin, FiCalendar } from "react-icons/fi";
+import "./Experience.scss";
 
 const Experience = () => (
   <section className="section container" id="experience">
     <h2>Experience</h2>
-    <ol className="timeline">
+    <div className="timeline">
       {experience.map((e, i) => (
-        <li key={e.company + i} className="timeline__item">
+        <div key={e.company + i} className="timeline__item">
           <div className="timeline__dot" />
-          <h4>
-            {e.role} • {e.company}
-          </h4>
-          <div className="muted small">{e.period}</div>
-          <ul className="bullets">
-            {e.bullets.map((b, idx) => (
-              <li key={idx}>{b}</li>
-            ))}
-          </ul>
-        </li>
+          <div className="timeline__card">
+            <h4 className="timeline__role">{e.role}</h4>
+            <h5 className="timeline__company">{e.company}</h5>
+            <div className="timeline__meta">
+              <span><FiCalendar /> {e.period}</span>
+              {e.location && (
+                <span><FiMapPin /> {e.location}</span>
+              )}
+            </div>
+            <ul className="bullets">
+              {e.bullets.map((b, idx) => (
+                <li key={idx}>{b}</li>
+              ))}
+            </ul>
+          </div>
+        </div>
       ))}
-    </ol>
+    </div>
   </section>
 );
 
