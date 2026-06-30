@@ -103,10 +103,19 @@ export const miniProjects = [
 
 
 export const experience = [
+    {
+    company: "Asian Paints",
+    role: "Principle Executive - Systems Development",
+    period: "July 2026 – Present",
+    location: "Mumbai, Maharashtra, India · On-site",
+    bullets: [
+      "Working on dealer incentives portal to provide CNs basis the sales data"
+    ],
+  },
   {
     company: "Asian Paints",
     role: "Senior Executive - Systems Development",
-    period: "Oct 2024 – Present · 1 yr",
+    period: "Oct 2024 – Jun 2026 · 1 yr 8 mos",
     location: "Mumbai, Maharashtra, India · On-site",
     bullets: [
       "Leveraging expertise in SAP Hybris, Flutter, and AngularJS to drive innovative digital solutions."
