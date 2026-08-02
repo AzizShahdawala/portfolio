@@ -17,6 +17,9 @@ export const skillGroups = [
 ];
 
 export const projects = [
+  { title: "ReviewPilot", type: "AI-assisted developer tooling", year: "2026", desc: "An explainable, privacy-first code review workbench that identifies security, reliability, and maintainability risks locally in the browser, with severity scoring and actionable remediation.", stack: ["React", "TypeScript", "Static Analysis", "Developer Experience"], repo: "https://github.com/AzizShahdawala/reviewpilot-lab", live: "https://reviewpilot-lab.vercel.app" },
+  { title: "TraceForge", type: "Observability engineering", year: "2026", desc: "An interactive incident-response simulator with live golden signals, service topology, SLO error budgets, correlated event timelines, failure injection, and guided remediation.", stack: ["React", "TypeScript", "Observability", "SRE"], repo: "https://github.com/AzizShahdawala/traceforge", live: "https://traceforge-hazel.vercel.app" },
+  { title: "ArchCanvas", type: "System design tooling", year: "2026", desc: "A capacity-planning studio that converts product assumptions into peak throughput, storage, network, availability, and infrastructure recommendations through a live architecture model.", stack: ["React", "TypeScript", "System Design", "Capacity Planning"], repo: "https://github.com/AzizShahdawala/archcanvas", live: "https://archcanvas.vercel.app" },
   {
     title: "Enterprise Commerce Platform",
     type: "Commerce engineering",
