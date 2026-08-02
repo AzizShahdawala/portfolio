@@ -16,6 +16,7 @@ const Contact = () => {
       if (!API_URL) throw new Error("CONTACT_API_UNAVAILABLE");
       const response = await fetch(`${API_URL}/contact`, { method: "POST", headers: { "Content-Type": "application/json" }, body: JSON.stringify(form) });
       const data = await response.json().catch(() => ({}));
+      if (response.status === 404 || response.status >= 500) throw new Error("CONTACT_API_UNAVAILABLE");
       if (!response.ok) throw new Error(data.message || "Unable to send your message.");
       setForm({ name: "", email: "", subject: "", message: "" });
       setStatus({ type: "success", message: "Thanks — your message is on its way." });
