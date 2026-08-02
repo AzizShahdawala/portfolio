@@ -8,6 +8,7 @@ import Experience from "./components/experience/Experience";
 import Contact from "./components/contact/Contact";
 import Footer from "./components/footer/Footer";
 import MiniProjects from "./components/mini-projects/MiniProjects";
+import TechNews from "./components/tech-news/TechNews";
 
 const App = () => {
   const [dark, setDark] = useState(() => localStorage.getItem("theme") !== "light");
@@ -36,6 +37,7 @@ const App = () => {
         <Skills />
         <Projects />
         <MiniProjects />
+        <TechNews />
         <Experience />
         <Contact />
       </main>
