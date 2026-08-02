@@ -1,51 +1,13 @@
 import React from "react";
+import { FiArrowUpRight, FiGithub } from "react-icons/fi";
 import { projects } from "../../content";
-import { FiGithub, FiEye } from "react-icons/fi";
-import "./Projects.scss";
 
 const Projects = () => (
   <section className="section container" id="projects">
-    <h2>Projects</h2>
-    <div className="projects__grid">
-      {projects.map((p) => (
-        <article key={p.title} className="card">
-          <div className="card__head">
-            <h3>{p.title}</h3>
-            <span className="year">{p.year}</span>
-          </div>
-          <p className="desc">{p.desc}</p>
-          <div className="tags">
-            {p.stack.map((t) => (
-              <span key={t} className="pill">
-                {t}
-              </span>
-            ))}
-          </div>
-          <div className="actions">
-            {p.repo && (
-              <a
-                className="btn btn--sm btn--dark"
-                href={p.repo}
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <FiGithub size={16} /> Repo
-              </a>
-            )}
-            {p.live && (
-              <a
-                className="btn btn--sm btn--outline"
-                href={p.live}
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <FiEye size={16} /> Live
-              </a>
-            )}
-          </div>
-        </article>
-      ))}
-    </div>
+    <div className="section-heading"><span className="eyebrow">Selected work</span><h2>Products built for real people and real operations.</h2></div>
+    <div className="projects__grid">{projects.map((project, index) => <article className={`project-card ${index === 0 ? "project-card--featured" : ""}`} key={project.title}>
+      <div className="project-card__index">0{index + 1}</div><div className="project-card__content"><div className="project-card__meta"><span>{project.type}</span><span>{project.year}</span></div><h3>{project.title}</h3><p>{project.desc}</p><div className="tags">{project.stack.map((tag) => <span key={tag}>{tag}</span>)}</div>{project.repo && <a className="text-link" href={project.repo} target="_blank" rel="noreferrer"><FiGithub /> View repository <FiArrowUpRight /></a>}</div>
+    </article>)}</div>
   </section>
 );
 

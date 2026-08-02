@@ -1,18 +1,11 @@
 import React from "react";
-import { skills } from "../../content";
-import "./Skills.scss";
+import { skillGroups } from "../../content";
 
 const Skills = () => (
-  <section className="section container" id="skills">
-    <h2>Skills</h2>
-    <div className="skills__grid">
-      {skills.map((s) => (
-        <span key={s} className="pill">
-          {s}
-        </span>
-      ))}
-    </div>
-  </section>
+  <section className="section section--tinted" id="skills"><div className="container">
+    <div className="section-heading"><span className="eyebrow">Capabilities</span><h2>From polished interfaces to production services.</h2><p>A practical toolkit shaped by real enterprise delivery.</p></div>
+    <div className="skill-grid">{skillGroups.map((group, index) => <article className="skill-card" key={group.title}><span className="skill-card__number">0{index + 1}</span><h3>{group.title}</h3><div className="tags">{group.skills.map((skill) => <span key={skill}>{skill}</span>)}</div></article>)}</div>
+  </div></section>
 );
 
 export default Skills;

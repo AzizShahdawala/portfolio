@@ -5,7 +5,7 @@ import "./Experience.scss";
 
 const Experience = () => (
   <section className="section container" id="experience">
-    <h2>Experience</h2>
+    <div className="section-heading"><span className="eyebrow">Experience</span><h2>A career built across product, platform, and data.</h2></div>
     <div className="timeline">
       {experience.map((e, i) => (
         <div key={e.company + i} className="timeline__item">

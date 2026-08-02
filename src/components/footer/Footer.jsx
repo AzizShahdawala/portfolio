@@ -1,11 +1,6 @@
 import React from "react";
+import { FiArrowUp } from "react-icons/fi";
 import { me } from "../../content";
-import "./Footer.scss";
 
-const Footer = () => (
-  <footer className="footer container">
-    © {new Date().getFullYear()} {me.name} • All rights reserved
-  </footer>
-);
-
+const Footer = () => <footer className="footer"><div className="container"><p>© {new Date().getFullYear()} {me.name}. Built with care in Mumbai.</p><a href="#home">Back to top <FiArrowUp /></a></div></footer>;
 export default Footer;

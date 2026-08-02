@@ -1,55 +1,12 @@
 import React from "react";
+import { FiArrowUpRight, FiGithub } from "react-icons/fi";
 import { miniProjects } from "../../content";
-import { FiGithub, FiEye } from "react-icons/fi";
-import "./MiniProjects.scss";
 
 const MiniProjects = () => (
-  <section className="section container" id="mini-projects">
-    <div className="mini-projects__header">
-      <h2>Mini Projects</h2>
-      <span className="hint">⇢ Swipe to explore</span>
-    </div>
-    <div className="mini-projects__row">
-      {miniProjects.map((p) => (
-        <article key={p.title} className="card">
-          <div className="card__head">
-            <h3>{p.title}</h3>
-            <span className="year">{p.year}</span>
-          </div>
-          <p className="desc">{p.desc}</p>
-          <div className="tags">
-            {p.stack.map((t) => (
-              <span key={t} className="pill">
-                {t}
-              </span>
-            ))}
-          </div>
-          <div className="actions">
-            {p.repo && (
-              <a
-                className="btn btn--sm btn--dark"
-                href={p.repo}
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <FiGithub size={16} /> Repo
-              </a>
-            )}
-            {p.live && (
-              <a
-                className="btn btn--sm btn--outline"
-                href={p.live}
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <FiEye size={16} /> Live
-              </a>
-            )}
-          </div>
-        </article>
-      ))}
-    </div>
-  </section>
+  <section className="section section--tinted" id="playground"><div className="container">
+    <div className="section-heading section-heading--row"><div><span className="eyebrow">Code playground</span><h2>Small builds, useful experiments.</h2></div><a className="text-link" href="https://github.com/AzizShahdawala?tab=repositories" target="_blank" rel="noreferrer">All repositories <FiArrowUpRight /></a></div>
+    <div className="mini-grid">{miniProjects.map((project) => <article className="mini-card" key={project.title}><div className="mini-card__icon"><FiGithub /></div><h3>{project.title}</h3><p>{project.desc}</p><div className="tags">{project.stack.map((tag) => <span key={tag}>{tag}</span>)}</div><div className="mini-card__links"><a href={project.repo} target="_blank" rel="noreferrer">Code</a>{project.live && <a href={project.live} target="_blank" rel="noreferrer">Live <FiArrowUpRight /></a>}</div></article>)}</div>
+  </div></section>
 );
 
 export default MiniProjects;
