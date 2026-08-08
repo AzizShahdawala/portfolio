@@ -1,4 +1,4 @@
-import { fireEvent, render, screen, within } from "@testing-library/react";
+import { render, screen } from "@testing-library/react";
 import App from "./App";
 
 test("renders the portfolio's primary identity and navigation", () => {
@@ -6,16 +6,12 @@ test("renders the portfolio's primary identity and navigation", () => {
   expect(screen.getByRole("heading", { name: /build reliable digital products/i })).toBeInTheDocument();
   expect(screen.getByRole("navigation", { name: /main navigation/i })).toBeInTheDocument();
   expect(screen.getByRole("link", { name: /explore product concepts/i })).toHaveAttribute("href", "#templates");
-  expect(screen.getByRole("heading", { name: /one engineering system/i })).toBeInTheDocument();
+  expect(screen.getByRole("heading", { name: /open them.*click around/i })).toBeInTheDocument();
   expect(screen.getByRole("heading", { name: /saifee rovers operations platform/i })).toBeInTheDocument();
 });
 
-test("lets a visitor inspect an original product concept", () => {
+test("links visitors to working website demos", () => {
   render(<App />);
-  fireEvent.click(screen.getAllByRole("button", { name: /explore concept/i })[0]);
-  const dialog = screen.getByRole("dialog");
-  expect(dialog).toBeInTheDocument();
-  expect(within(dialog).getByRole("heading", { name: /commerce atelier/i })).toBeInTheDocument();
-  fireEvent.click(screen.getByRole("button", { name: /close concept preview/i }));
-  expect(screen.queryByRole("dialog")).not.toBeInTheDocument();
+  expect(screen.getAllByRole("link", { name: /open live demo/i })).toHaveLength(3);
+  expect(screen.getByRole("heading", { name: /noir & loom/i })).toBeInTheDocument();
 });
