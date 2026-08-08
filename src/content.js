@@ -4,7 +4,7 @@ export const me = {
   headline: "I build reliable digital products from interface to infrastructure.",
   summary: "Full-stack engineer with 6+ years of experience shipping commerce, enterprise, and data-driven products. I turn complex workflows into fast, maintainable experiences across React, Java, Spring Boot, Angular, Flutter, and SAP Commerce Cloud.",
   location: "Mumbai, India",
-  email: "azizshada@gmail.com",
+  email: "contact@azizshahda.com",
   phone: "+91 8097386483",
   linkedin: "https://www.linkedin.com/in/azizshahda",
   github: "https://github.com/AzizShahdawala",
