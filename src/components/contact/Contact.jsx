@@ -1,13 +1,23 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { FiArrowUpRight, FiCheck, FiGithub, FiLinkedin, FiMail, FiMapPin } from "react-icons/fi";
 import { me } from "../../content";
 
 const API_URL = process.env.REACT_APP_API_URL?.replace(/\/$/, "");
 
-const Contact = () => {
+const Contact = ({ selectedTemplate }) => {
   const [form, setForm] = useState({ name: "", email: "", subject: "", message: "" });
   const [status, setStatus] = useState({ type: "idle", message: "" });
   const handleChange = ({ target }) => setForm((current) => ({ ...current, [target.name]: target.value }));
+
+  useEffect(() => {
+    if (!selectedTemplate) return;
+    setForm((current) => ({
+      ...current,
+      subject: `Website enquiry: ${selectedTemplate.title}`,
+      message: `Hi Aziz,\n\nI'm interested in the ${selectedTemplate.title}${selectedTemplate.category ? ` (${selectedTemplate.category})` : ""} direction for my project.\n\nBusiness / organisation:\nWhat I need the website to achieve:\nImportant pages or features:\nPreferred launch timeline:\nApproximate budget range:\n\nPlease get in touch so we can discuss the next steps.`,
+    }));
+    setStatus({ type: "idle", message: "Template selected—add your details and send the enquiry." });
+  }, [selectedTemplate]);
 
   const handleSubmit = async (event) => {
     event.preventDefault();
@@ -32,13 +42,13 @@ const Contact = () => {
 
   return (
     <section className="section contact" id="contact"><div className="container contact__grid">
-      <div className="contact__copy"><span className="eyebrow">Let’s work together</span><h2>Have a complex problem worth solving?</h2><p>Tell me what you’re building, improving, or untangling. I’m always open to thoughtful product conversations.</p>
+      <div className="contact__copy"><span className="eyebrow">Let's build together</span><h2>Turn your idea into a product people trust.</h2><p>Share your business, goals, must-have features, timeline, and budget range. I’ll reply with the right next step—not a generic sales pitch.</p>
         <div className="contact__links"><a href={`mailto:${me.email}`}><FiMail /> <span><small>Email</small>{me.email}</span></a><span><FiMapPin /> <span><small>Based in</small>{me.location}</span></span><a href={me.linkedin} target="_blank" rel="noreferrer"><FiLinkedin /> LinkedIn <FiArrowUpRight /></a><a href={me.github} target="_blank" rel="noreferrer"><FiGithub /> GitHub <FiArrowUpRight /></a></div>
       </div>
       <form className="contact-form" onSubmit={handleSubmit}>
         <div className="form-row"><label>Name<input name="name" value={form.name} onChange={handleChange} autoComplete="name" maxLength="80" required placeholder="Your name" /></label><label>Email<input type="email" name="email" value={form.email} onChange={handleChange} autoComplete="email" maxLength="120" required placeholder="you@company.com" /></label></div>
         <label>Subject<input name="subject" value={form.subject} onChange={handleChange} maxLength="140" required placeholder="What would you like to discuss?" /></label>
-        <label>Message<textarea name="message" value={form.message} onChange={handleChange} rows="6" minLength="10" maxLength="4000" required placeholder="A little context goes a long way…" /></label>
+        <label>Project brief<textarea name="message" value={form.message} onChange={handleChange} rows="9" minLength="10" maxLength="4000" required placeholder="Tell me about your business, goals, required features, timeline, and budget range." /></label>
         <div className="form-footer"><button className="btn" type="submit" disabled={status.type === "loading"}>{status.type === "loading" ? "Sending…" : "Send message"} <FiArrowUpRight /></button><p className={`form-status form-status--${status.type}`} aria-live="polite">{status.type === "success" && <FiCheck />}{status.message}</p></div>
       </form>
     </div></section>

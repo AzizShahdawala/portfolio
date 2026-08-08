@@ -5,13 +5,13 @@ import { me } from "../../content";
 const Hero = () => (
   <section className="hero container" id="home">
     <div className="hero__copy">
-      <div className="availability"><span /> Available for meaningful product work</div>
+      <div className="availability"><span /> Available for select client projects</div>
       <p className="hero__intro">Hello, I’m Aziz — {me.role}</p>
       <h1>{me.headline}</h1>
-      <p className="hero__summary">I work across frontend, backend, and enterprise platforms to ship software that feels simple—even when the system behind it isn’t.</p>
+      <p className="hero__summary">I design and build fast, dependable websites and full-stack products that help businesses sell, operate, and grow—with one engineering partner from idea to launch.</p>
       <div className="hero__actions">
-        <a className="btn" href="#projects">Explore my work <FiArrowUpRight /></a>
-        <a className="btn btn--ghost" href="#contact">Start a conversation</a>
+        <a className="btn" href="#templates">Explore website concepts <FiArrowUpRight /></a>
+        <a className="btn btn--ghost" href="#contact">Start your project</a>
       </div>
       <div className="hero__meta">
         <span><FiMapPin /> {me.location}</span>

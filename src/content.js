@@ -17,6 +17,15 @@ export const skillGroups = [
 ];
 
 export const projects = [
+  {
+    title: "Saifee Rovers Operations Platform",
+    type: "Community operations platform",
+    year: "2026",
+    desc: "A responsive administration and member experience for attendance, events, member management, analytics, and camera-assisted check-ins, designed for real community operations.",
+    stack: ["React", "Material UI", "REST APIs", "Analytics"],
+    repo: "https://github.com/AzizShahdawala/saifee-rovers-app",
+    live: "https://azizshahdawala.github.io/saifee-rovers-app/",
+  },
   { title: "ReviewPilot", type: "AI-assisted developer tooling", year: "2026", desc: "An explainable, privacy-first code review workbench that identifies security, reliability, and maintainability risks locally in the browser, with severity scoring and actionable remediation.", stack: ["React", "TypeScript", "Static Analysis", "Developer Experience"], repo: "https://github.com/AzizShahdawala/reviewpilot-lab", live: "https://reviewpilot-lab.vercel.app" },
   { title: "TraceForge", type: "Observability engineering", year: "2026", desc: "An interactive incident-response simulator with live golden signals, service topology, SLO error budgets, correlated event timelines, failure injection, and guided remediation.", stack: ["React", "TypeScript", "Observability", "SRE"], repo: "https://github.com/AzizShahdawala/traceforge", live: "https://traceforge-hazel.vercel.app" },
   { title: "ArchCanvas", type: "System design tooling", year: "2026", desc: "A capacity-planning studio that converts product assumptions into peak throughput, storage, network, availability, and infrastructure recommendations through a live architecture model.", stack: ["React", "TypeScript", "System Design", "Capacity Planning"], repo: "https://github.com/AzizShahdawala/archcanvas", live: "https://archcanvas.vercel.app" },
@@ -42,6 +51,18 @@ export const projects = [
     stack: ["React", "JavaScript", "E-commerce"],
     repo: "https://github.com/AzizShahdawala/crown-clothing",
   },
+];
+
+export const websiteTemplates = [
+  { id: "commerce", category: "Commerce", title: "Commerce Atelier", subtitle: "Premium e-commerce storefront", description: "A conversion-focused shop with rich product discovery, bundles, secure checkout, order tracking, and a manageable product catalogue.", audience: "Retail, D2C, fashion, beauty, specialty products", features: ["Product catalogue & filters", "Cart and checkout", "Payments & order tracking", "Admin-ready architecture"], palette: ["#191715", "#f0c7a5", "#fff8f2"], layout: "commerce" },
+  { id: "real-estate", category: "Property", title: "Habitat Estates", subtitle: "Real-estate discovery platform", description: "A refined property experience with searchable listings, map-ready discovery, lead capture, agent profiles, and scheduled viewings.", audience: "Agents, developers, property managers, brokers", features: ["Smart listing search", "Property detail pages", "Lead qualification", "Viewing requests"], palette: ["#153d35", "#d6a45f", "#f3f1e8"], layout: "property" },
+  { id: "business", category: "Business", title: "Northstar Studio", subtitle: "High-trust business website", description: "A polished company presence that explains services clearly, builds credibility, captures qualified enquiries, and supports future growth.", audience: "Consultancies, agencies, manufacturers, B2B services", features: ["Service architecture", "Case studies", "Lead capture", "CMS-ready content"], palette: ["#18233a", "#8aa6ff", "#f6f8ff"], layout: "business" },
+  { id: "saas", category: "Technology", title: "Orbit SaaS", subtitle: "Product-led SaaS launch site", description: "A crisp product marketing system that communicates value fast with feature storytelling, integrations, pricing, demos, and onboarding calls to action.", audience: "SaaS products, AI tools, startups, developer platforms", features: ["Product storytelling", "Pricing plans", "Integration directory", "Demo conversion flow"], palette: ["#10121a", "#9c7cff", "#e8ff80"], layout: "saas" },
+  { id: "hospitality", category: "Hospitality", title: "Saffron Table", subtitle: "Restaurant and hospitality experience", description: "An atmospheric, mobile-first destination for menus, reservations, locations, events, offers, and memorable brand storytelling.", audience: "Restaurants, cafes, hotels, caterers, cloud kitchens", features: ["Menus & offers", "Reservations", "Location discovery", "Events and galleries"], palette: ["#401e17", "#ec9a4b", "#fff3df"], layout: "hospitality" },
+  { id: "healthcare", category: "Healthcare", title: "Clarity Care", subtitle: "Accessible healthcare website", description: "A calm, trustworthy patient experience for specialties, doctors, appointment requests, educational content, and clinic information.", audience: "Clinics, specialists, wellness practices, diagnostics", features: ["Doctor and service profiles", "Appointment requests", "Accessible UX", "Patient resources"], palette: ["#0c4a55", "#64d4c2", "#effcf9"], layout: "healthcare" },
+  { id: "education", category: "Education", title: "Brightpath Academy", subtitle: "Learning and course platform", description: "A structured education experience for course discovery, cohorts, instructors, admissions, student outcomes, and learning resources.", audience: "Schools, coaching, courses, academies, EdTech", features: ["Course catalogue", "Admissions funnel", "Faculty profiles", "Student dashboard-ready"], palette: ["#1f325c", "#ffcc66", "#f5f7ff"], layout: "education" },
+  { id: "creator", category: "Personal Brand", title: "Signal Portfolio", subtitle: "Creator and expert portfolio", description: "A distinctive personal brand for showcasing expertise, case studies, writing, speaking, services, and high-intent enquiries.", audience: "Creators, freelancers, executives, speakers, artists", features: ["Case-study storytelling", "Content hub", "Service offers", "Newsletter-ready"], palette: ["#292420", "#ff6b5f", "#f8eadf"], layout: "creator" },
+  { id: "operations", category: "Custom App", title: "Flowdesk OS", subtitle: "Custom business operations portal", description: "A tailored authenticated application for replacing spreadsheets and manual workflows with dashboards, approvals, reporting, and role-based access.", audience: "Operations teams, associations, internal platforms, SMEs", features: ["Role-based access", "Workflow automation", "Dashboards & reports", "API integrations"], palette: ["#172433", "#4f9cff", "#eaf3ff"], layout: "dashboard" },
 ];
 
 export const miniProjects = [

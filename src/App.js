@@ -9,14 +9,21 @@ import Contact from "./components/contact/Contact";
 import Footer from "./components/footer/Footer";
 import MiniProjects from "./components/mini-projects/MiniProjects";
 import TechNews from "./components/tech-news/TechNews";
+import TemplateShowcase from "./components/template-showcase/TemplateShowcase";
 
 const App = () => {
   const [dark, setDark] = useState(() => localStorage.getItem("theme") !== "light");
+  const [selectedTemplate, setSelectedTemplate] = useState(null);
 
   useEffect(() => {
     document.documentElement.classList.toggle("theme--dark", dark);
     localStorage.setItem("theme", dark ? "dark" : "light");
   }, [dark]);
+
+  const requestTemplate = (template) => {
+    setSelectedTemplate(template);
+    window.setTimeout(() => document.getElementById("contact")?.scrollIntoView({ behavior: "smooth" }), 0);
+  };
 
   return (
     <div className="site-shell">
@@ -35,11 +42,12 @@ const App = () => {
           </div>
         </section>
         <Skills />
+        <TemplateShowcase onRequest={requestTemplate} />
         <Projects />
         <MiniProjects />
         <TechNews />
         <Experience />
-        <Contact />
+        <Contact selectedTemplate={selectedTemplate} />
       </main>
       <Footer />
     </div>
