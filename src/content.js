@@ -18,6 +18,15 @@ export const skillGroups = [
 
 export const projects = [
   {
+    title: "Mustafa & Arwa Wedding RSVP",
+    type: "Full-stack event experience",
+    year: "2026",
+    desc: "A wedding-themed two-event RSVP platform with guest confirmations, attendance tracking, a protected host dashboard, and Brevo-powered reminder emails.",
+    stack: ["React", "Express", "MongoDB", "Vercel", "Brevo"],
+    repo: "https://github.com/AzizShahdawala/MustafaAndArwaInvitation",
+    live: "https://azizshahdawala.github.io/MustafaAndArwaInvitation/",
+  },
+  {
     title: "Saifee Rovers Operations Platform",
     type: "Community operations platform",
     year: "2026",
